@@ -1,0 +1,51 @@
+:root {
+    --white: #FFF;
+    --primary-color: #746C69D;
+    --primary-color-100:var(--primary-color);
+    --primary-color-75:#74C69DC0;
+    --secondary-color-100: var(--secondary-color);
+    --secondary-color-75: #FFFFFFc0;
+    
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+.header-section {
+    background-color: #74C69D;
+    padding: 35px 100px 38px;
+    color: var(--secondary-color); /*does not work*/
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-heading {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    line-height: 125%;
+}
+
+.logo {
+    font-size: 40px;
+}
+
+.nav-container{
+    width: 390px;
+}
+
+
+.nav-container ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+.nav-container a {
+    color: inherit;
+    text-decoration: none;
+}
+
