@@ -1,7 +1,9 @@
 :root {
     --white: #FFF;
     --primary-color: #74C69D;
-    --primary-color-100:var(--primary-color);
+    --dark-color: #212529;
+    --dark-color-100: var(--dark-color);
+    --primary-color-100: var(--primary-color);
     --primary-color-75:#74C69DC0;
     --secondary-color-100: var(--secondary-color);
     --secondary-color-75: #FFFFFFc0;
@@ -96,13 +98,27 @@ h1 {
 
 .portfolio-section {
     display: grid;
+    gap: 55px;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 64px;
 }
 
 article img {
     width: 100%;
+}
+
+.secondary-button {
+    background-color: var(--dark-color);
+    padding: 13px 30px 10px;
+    color: var(--white);
+    font-family: inherit;
+    border-radius: 5px;
+    border: none;
+}
+
+.more-section {
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 .social-media img {
@@ -122,7 +138,7 @@ article img {
 
 @media (max-width: 1024px) {
     .site-content {
-        width: 768px;
+        width: 700px;
     }
 }
 
@@ -159,6 +175,7 @@ article img {
     .site-content {
         width: 320px;
     }
+
 
    .footer-section p {
      font-size: 1rem;
