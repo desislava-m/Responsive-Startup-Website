@@ -71,6 +71,10 @@ h1 {
     width: 190px;
 }
 
+.burger-menu {
+    display: none;
+}
+
 
 .nav-container ul {
     display: flex;
@@ -147,16 +151,30 @@ article img {
         width: 500px;
     }
 
+    .header-section-container nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: inline;
+    }
+    
+
+    .logo-container {
+        width: 130px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .logo-container svg {
+        width: 45px;
+    }
+
     .portfolio-section {
         grid-template-columns: 1fr;
         row-gap: 55px;
-    }
-
-
-    /* Switch navigation to burger menu */
-
-    .header-section-container nav {
-        display: none;
     }
 
     .footer-section-container {
