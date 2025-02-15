@@ -57,6 +57,13 @@ p.label {
     margin-bottom: 30px;
 }
 
+.header-section.site-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .header-section-container, .footer-section-container {
     display: flex;
     justify-content: space-between;
@@ -102,7 +109,6 @@ p.label {
 .welcome-paragraph {
     color: var(--secondary-color-75);
 }
-
 
 
 .content-header-section {
