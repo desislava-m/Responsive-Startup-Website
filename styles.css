@@ -38,6 +38,11 @@ h1 {
     margin-top: 0;
 }
 
+p.label {
+    color: var(--white);
+}
+
+
 .sub-heading {
     font-size: 1.25rem;
     line-height: 125%;
@@ -89,6 +94,17 @@ h1 {
     text-decoration: none;
 }
 
+.welcome-container {
+    color: var(--white);
+    width: 415px;
+}
+
+.welcome-paragraph {
+    color: var(--secondary-color-75);
+}
+
+
+
 .content-header-section {
     display: flex;
     justify-content: center;
@@ -111,13 +127,22 @@ article img {
     width: 100%;
 }
 
-.secondary-button {
-    background-color: var(--dark-color);
-    padding: 13px 30px 10px;
-    color: var(--white);
+
+.primary-button, .secondary-button {
     font-family: inherit;
     border-radius: 5px;
     border: none;
+    padding: 13px 30px 10px;
+}
+
+.primary-button {
+    background-color: var(--white);
+    color: black;
+}
+
+.secondary-button {
+    background-color: var(--dark-color);
+    color: var(--white); 
 }
 
 .more-section {
