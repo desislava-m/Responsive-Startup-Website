@@ -1,8 +1,8 @@
 :root {
     --white: #FFF;
     --primary-color: #74C69D;
-    --dark-color: #212529;
-    --dark-color-100: var(--dark-color);
+    --dark-color-100: #212529;
+    --dark-color-50: #21252980;
     --primary-color-100: var(--primary-color);
     --primary-color-75:#74C69DC0;
     --secondary-color-100: var(--secondary-color);
@@ -21,9 +21,10 @@ strong {
 
 ul {
     padding: 0;
+    list-style: none;
 }
 
-body {
+body, p {
     margin: 0;
 }
 
@@ -50,6 +51,15 @@ h1 {
 
 p.label {
     color: var(--white);
+}
+
+.small-headline {
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
 
@@ -126,6 +136,22 @@ p.label {
 }
 
 
+.partner-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-bottom: 73px;
+}
+
+
+.partner-container {
+
+    display: flex;
+    gap: 68px;
+}
+
 .content-header-section {
     display: flex;
     justify-content: center;
@@ -135,6 +161,31 @@ p.label {
 .content-header-container {
     text-align: center;
     width: 410px
+}
+
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    align-items: center;
+}
+
+.info-section-content {
+    width: 470px;
+}
+
+.info-section-content p {
+    margin-bottom: 16px;
+    color: var(--dark-color-50);
+}
+
+.mission-info-section {
+    margin-bottom: 75px;
+}
+
+.solution-info-section {
+    flex-direction: row-reverse;
 }
 
 .portfolio-section {
@@ -163,7 +214,7 @@ article img {
 }
 
 .secondary-button {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color-100);
     color: var(--white); 
 }
 
