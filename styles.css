@@ -2,6 +2,7 @@
     --white: #FFF;
     --primary-color: #74C69D;
     --dark-color-100: #212529;
+    --dark-color-75: #212529BF;
     --dark-color-50: #21252980;
     --primary-color-100: var(--primary-color);
     --primary-color-75:#74C69DC0;
@@ -39,6 +40,11 @@ h1 {
     font-weight: 700;
     line-height: 125%;
     margin: 16px 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: 'Crimson Text';
 }
 
 .label {
@@ -186,6 +192,32 @@ p.label {
 
 .solution-info-section {
     flex-direction: row-reverse;
+    margin-bottom: 110px;
+}
+
+.talents-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 54px;
+}
+
+.talent-image-wrapper {
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius:  50%;
+    text-align: center;
+}
+
+.talent-image-wrapper img {
+    width: unset;
+    margin: 15px
+}
+
+.talents-section footer {
+    color: var(--dark-color-75);
 }
 
 .portfolio-section {
