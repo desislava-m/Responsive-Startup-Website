@@ -4,6 +4,7 @@
     --dark-color-100: #212529;
     --dark-color-75: #212529BF;
     --dark-color-50: #21252980;
+    --dark-color-25: #21252940;
     --primary-color-100: var(--primary-color);
     --primary-color-75:#74C69DC0;
     --secondary-color-100: var(--secondary-color);
@@ -79,7 +80,6 @@ p.label {
 .header-section {
     background-color: #74C69D;
     padding: 35px 0 38px;
-    color: var(--secondary-color); /*does not work*/ 
     margin-bottom: 30px;
 }
 
@@ -129,11 +129,12 @@ p.label {
 
 .welcome-section {
     padding: 40px 0;
+    
 }
 
 .welcome-container {
     color: var(--white);
-    width: 415px;
+    max-width: 415px;
 }
 
 .welcome-paragraph {
@@ -141,22 +142,29 @@ p.label {
     margin-bottom: 25px;
 }
 
+.section-text {
+    text-align: center;
+    max-width: 410px;
+}
 
 .partner-section {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 55px;
-    margin-bottom: 73px;
+    margin-bottom: 75px;
 }
-
 
 .partner-container {
-
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 68px;
 }
+
+.partner-container img {
+    width: 100%;
+}
+
 
 .content-header-section {
     display: flex;
@@ -178,7 +186,7 @@ p.label {
 }
 
 .info-section-content {
-    width: 470px;
+    max-width: 470px;
 }
 
 .info-section-content p {
@@ -198,8 +206,24 @@ p.label {
 .talents-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    align-items: center;
     margin-bottom: 54px;
+    gap: 45px;
+}
+
+.talents-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 47px;
+    margin-bottom: 45px;
+}
+
+.talent-list-item {
+    box-shadow: 3px 4px 12px 1px var(--dark-color-25);
+    padding: 20px 25px;
+    border-radius: 5px;
+    text-align: left;
 }
 
 .talent-image-wrapper {
@@ -209,22 +233,25 @@ p.label {
     border: 1px solid black;
     border-radius:  50%;
     text-align: center;
+    margin: 0 13px;
 }
 
 .talent-image-wrapper img {
     width: unset;
-    margin: 15px
+    margin: 13px
 }
 
 .talents-section footer {
     color: var(--dark-color-75);
+    text-transform: uppercase;
 }
 
 .portfolio-section {
+    width: 100%;
     display: grid;
-    gap: 55px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570fr 555fr;
     margin-bottom: 64px;
+    gap: 55px;
 }
 
 article img {
@@ -266,13 +293,42 @@ article img {
 
 @media (max-width: 1200px) {
     .site-content {
-        width: 900px;
+        width: 940px;
     }
+
 }
 
 @media (max-width: 1024px) {
     .site-content {
         width: 700px;
+    }
+
+    .partner-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 68px;
+        row-gap: 40px;
+    }
+
+    .welcome-container h1 {
+        font-size: 30px;
+    }
+
+    .talents-list {
+        grid-template-columns: 2fr 2fr;
+        gap: 35px;
+    }
+
+    .info-section {
+        gap: 55px
+    }
+
+    .header-image img {
+        width: 450px;
+    }
+
+    .section-banner img {
+        width: 450px;
+
     }
 }
 
@@ -302,6 +358,30 @@ article img {
         width: 45px;
     }
 
+    .welcome-section {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding-bottom: 20px;
+    }
+
+    .partner-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 68px
+    }
+    .info-section {
+        flex-direction: column;
+    }
+
+    .solution-info-section {
+        margin-bottom: 40px;
+    } 
+
+    .talents-list {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
     .content-header-section {
         margin-bottom: 45px;
     }
@@ -318,6 +398,7 @@ article img {
 
     .footer-section-container {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -325,14 +406,40 @@ article img {
 
     /* lower article container width */
     
-    article {
-        width: 300px;
-    }
 
     .site-content {
         width: 320px;
+    } 
+
+    .portfolio-section article {
+        width: 300px;
     }
 
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .header-image img {
+       width: 100%;
+    }
+
+    .section-banner img {
+        width: 100%;
+
+    }
+
+    .partner-container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .portfolio-section article {
+        width: 320px;
+    }
+
+    .social-media {
+        margin-bottom: 20px;
+    }
 
    .footer-section p {
      font-size: 1rem;

@@ -1,0 +1,112 @@
+﻿diff --git a/index.html b/index.html
+index ca1d7c2..9384ee4 100644
+--- a/index.html
++++ b/index.html
+@@ -116,7 +116,7 @@
+ 
+             <section class="talents-section">
+                 <div class="section-header">
+-                    <p class="label">Team</p>
++                    <p class="small-headline">Team</p>
+                     <h1>Our Talents</h1>
+                     <p class="sub-heading">Lorem ipsum, dolor sit amet consectetur Suscipit nemo hic quos, ab</p>
+                 </div>
+@@ -133,6 +133,42 @@
+                             <p>CEO</p>
+                         </footer>
+                     </article>
++
++                    <article class="talent-list-item">
++                        <header>
++                            <div class="talent-image-wrapper">
++                                <img src="./public/Person-2.png" alt="Talent-avatar">
++                            </div>
++                        </header>
++                            <h4>Richard Guerra</h4>
++                        <footer>
++                            <p>CEO</p>
++                        </footer>
++                    </article>
++
++                    <article class="talent-list-item">
++                        <header>
++                            <div class="talent-image-wrapper">
++                                <img src="./public/Person-3.png" alt="Talent-avatar">
++                            </div>
++                        </header>
++                            <h4>Alexandra Stolz</h4>
++                        <footer>
++                            <p>Designer</p>
++                        </footer>
++                    </article>
++
++                    <article class="talent-list-item">
++                        <header>
++                            <div class="talent-image-wrapper">
++                                <img src="./public/Person-4.png" alt="Talent-avatar">
++                            </div>
++                        </header>
++                            <h4>Janet Bray</h4>
++                        <footer>
++                            <p>Developer</p>
++                        </footer>
++                    </article>
+                 </div>
+ 
+                 <button class="secondary-button sub-heading"> View Team</button>
+diff --git a/styles.css b/styles.css
+index 875e15f..be0c048 100644
+--- a/styles.css
++++ b/styles.css
+@@ -4,6 +4,7 @@
+     --dark-color-100: #212529;
+     --dark-color-75: #212529BF;
+     --dark-color-50: #21252980;
++    --dark-color-25: #21252940;
+     --primary-color-100: var(--primary-color);
+     --primary-color-75:#74C69DC0;
+     --secondary-color-100: var(--secondary-color);
+@@ -198,8 +199,17 @@ p.label {
+ .talents-section {
+     display: flex;
+     flex-direction: column;
+-    justify-content: center;
++    text-align: center;
++    align-items: center;
+     margin-bottom: 54px;
++    gap: 45px;
++}
++
++.talents-list {
++    display: grid;
++    grid-template-columns: repeat(4, 1fr);
++    gap: 47px;
++    margin-bottom: 45px;
+ }
+ 
+ .talent-image-wrapper {
+@@ -209,15 +219,23 @@ p.label {
+     border: 1px solid black;
+     border-radius:  50%;
+     text-align: center;
++    margin: 0 13px;
+ }
+ 
+ .talent-image-wrapper img {
+     width: unset;
+-    margin: 15px
++    margin: 13px
++}
++
++.talent-list-item {
++    box-shadow: 3px 4px 12px 1px var(--dark-color-25);
++    padding: 20px 40px;
++    border-radius: 5px;
+ }
+ 
+ .talents-section footer {
+     color: var(--dark-color-75);
++    text-transform: uppercase;
+ }
+ 
+ .portfolio-section {
